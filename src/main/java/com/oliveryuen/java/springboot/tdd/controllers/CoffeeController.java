@@ -1,10 +1,10 @@
 package com.oliveryuen.java.springboot.tdd.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.oliveryuen.java.springboot.tdd.Greeting;
+import com.oliveryuen.java.springboot.tdd.Coffee;
 import com.oliveryuen.java.springboot.tdd.services.CoffeeService;
 
 @RestController
@@ -21,15 +21,9 @@ public class CoffeeController {
     return "{\"status\":\"ok\"}";
   }
   
-  @RequestMapping("/greeting")
-  public Greeting getGreeting() {
-    return new Greeting(1L, "Oliver");
-  }
-  
-  /**
   @GetMapping("/coffee/{brand}/{name}")
   public Coffee getCoffee(@PathVariable String brand, @PathVariable String name) {
     return coffeeService.getCoffee("Starbucks", "Blonde");
-  }*/
+  }
 
 }

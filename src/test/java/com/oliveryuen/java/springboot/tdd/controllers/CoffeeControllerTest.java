@@ -18,7 +18,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.oliveryuen.java.springboot.tdd.Coffee;
 import com.oliveryuen.java.springboot.tdd.services.CoffeeService;
 
-@Ignore
+//@Ignore
 @RunWith(SpringRunner.class)
 // this will not start the real server like SpringBootTest
 @WebMvcTest(CoffeeController.class)
